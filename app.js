@@ -12,7 +12,7 @@
    ============================================================ */
 
 const LIFF_ID = "2010637619-80kXRKZ0";
-const STORAGE_KEY = "life_story_draft_v3";
+const DRAFT_KEY = "life_story_draft_v3";
 const SHARE_INFO_KEY = "life_story_share_v1";
 const SHARE_VIEW_PENDING_KEY = "life_story_shared_view_pending_v1";
 const PX_PER_MIN = 2; // 2px/分 で比例タイムライン描画
@@ -480,7 +480,7 @@ function collectTorisetsu(){
    ============================================================ */
 function saveDraft(){
   try{
-    localStorage.setItem(STORAGE_KEY,JSON.stringify({
+    localStorage.setItem(DRAFT_KEY,JSON.stringify({
       profile:   collectProfile(),
       cards:     collectCards(),
       torisetsu: collectTorisetsu(),
@@ -497,7 +497,7 @@ function flashSaved(){
 
 function loadDraft(){
   try{
-    const raw=localStorage.getItem(STORAGE_KEY); if(!raw) return false;
+    const raw=localStorage.getItem(DRAFT_KEY); if(!raw) return false;
     const data=JSON.parse(raw);
     document.getElementById("profileName").value      = data.profile?.name      ||"";
     document.getElementById("profileAge").value        = data.profile?.age       ||"";
@@ -1102,7 +1102,7 @@ function bindEvents(){
 
   document.getElementById("resetBtn").addEventListener("click",()=>{
     if(!confirm("下書きを削除して最初から作成しますか？この操作は取り消せません。")) return;
-    try{ localStorage.removeItem(STORAGE_KEY); }catch(_){}
+    try{ localStorage.removeItem(DRAFT_KEY); }catch(_){}
     try{ localStorage.removeItem(SHARE_INFO_KEY); }catch(_){}
     location.href=getFormBaseURL();
   });
@@ -1292,7 +1292,7 @@ async function checkFriendship(){
       ];
       activePatternId=schedulePatterns[0].id;
       createdAt=null;
-      try{ localStorage.removeItem(STORAGE_KEY); }catch(_){}
+      try{ localStorage.removeItem(DRAFT_KEY); }catch(_){}
       try{ localStorage.removeItem(SHARE_INFO_KEY); }catch(_){}
     }
     if(document.querySelectorAll("#cardList .life-card").length===0) addStarterCards();
