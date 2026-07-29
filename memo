@@ -1,0 +1,3 @@
+const SHARE_INFO_KEY = "life_story_share_v1";const SHARE_VIEW_PENDING_KEY = "life_story_shared_view_pending_v1";
+の2つは何のために使っていますか？
+キーをconst SHARE_INFO_KEY = "life_story_share_v1";const SHARE_VIEW_PENDING_KEY = "life_story_shared_view_pending_v1";
