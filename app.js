@@ -13,8 +13,8 @@
 
 const LIFF_ID = "2010637619-80kXRKZ0";
 const DRAFT_KEY = "konkatsu_selfintroduction_draft";
-const SHARE_INFO_KEY = "life_story_share_v1";
-const SHARE_VIEW_PENDING_KEY = "life_story_shared_view_pending_v1";
+const SHARE_INFO_KEY = "konkatsu_selfintroduction_share";
+const SHARE_VIEW_PENDING_KEY = "konkatsu_selfintroduction_shared_view_pending";
 const PX_PER_MIN = 2; // 2px/分 で比例タイムライン描画
 
 // ▼▼▼ デプロイ済みGAS Web AppのURL ▼▼▼
