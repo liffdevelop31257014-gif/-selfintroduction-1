@@ -1,4 +1,0 @@
-const SHARE_INFO_KEY = "life_story_share_v1";const SHARE_VIEW_PENDING_KEY = "life_story_shared_view_pending_v1";
-の2つは何のために使っていますか？
-キーをconst SHARE_INFO_KEY = "konkatsu_selfintroduction_draft_share";const SHARE_VIEW_PENDING_KEY = "konkatsu_selfintroduction_draft_shared_view_pending";
-に変更したいがapp.jsを書き換えるだけで問題なく動くか？なにか移行のための作業が必要ですか？
