@@ -11,7 +11,7 @@
    押すたびに同じリンクのまま中身だけを最新の内容に更新する。
    ============================================================ */
 
-const LIFF_ID = "2010637619-80kXRKZ0";
+const LIFF_ID = "2010312230-3gcd1xq6";
 const DRAFT_KEY = "konkatsu_selfintroduction_draft";
 const SHARE_INFO_KEY = "konkatsu_selfintroduction_share";
 const SHARE_VIEW_PENDING_KEY = "konkatsu_selfintroduction_shared_view_pending";
