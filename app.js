@@ -1296,8 +1296,12 @@ async function checkFriendship(){
 
   if(!liff.isLoggedIn()){ liff.login(); return; }
 
-  /* LIFF初期化・ログイン後に友だち確認（未追加ならダイアログで追加を促す） */
-  await checkFriendship();
+  /* LIFF初期化・ログイン後に友だち確認（未追加ならダイアログで追加を促す）
+     liff.getFriendship() / requestFriendship() はLINEサーバーへの通信を
+     伴うため、ここをawaitすると電波が悪い時に画面表示自体が止まって
+     しまう。必須の処理ではないので、裏側で実行させて画面構築は
+     先に進める（fire-and-forget）。 */
+  checkFriendship();
 
   const hadDraft=loadDraft();
 
